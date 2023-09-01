@@ -6,15 +6,12 @@ const {
   fetchByAccountInfo,
   fetchAllAccountInfo,
 } = require("../controllers/index");
-
+ 
 const { validateUserToken } = require("../lib/ath");
 
 // route for authentication
 router.post(
-  "/create_account",
-  body("accountname", "Name is required").trim(),
-  create_account
-);
+  "/createAccount",create_account);
 router.get("/getAccountInfo", fetchByAccountInfo);
 router.get("/getAllInfo", fetchAllAccountInfo);
 
