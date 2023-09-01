@@ -31,7 +31,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "accounttype": "
     "dob": "
     }' \
-    https://lendsqr-account-funding-api.herokuapp.com/api/v1/users/account
+    https://bank-mgt.onrender.com
    
 ```
 
@@ -48,7 +48,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 curl -X GET -H "Content-Type: application/json" -d '{
   "accountnumber": accountnumber"
   }' \
-    https://lendsqr-account-funding-api.herokuapp.com/api/v1/users/account
+    https://bank-mgt.onrender.com
 ```
 
 | Parameter | Type     | Description                       |
@@ -59,7 +59,7 @@ curl -X GET -H "Content-Type: application/json" -d '{
 
 ```bash
 curl -X GET -H "Content-Type: application/json" -d \
-    https://lendsqr-account-funding-api.herokuapp.com/api/v1/users/account
+    https://bank-mgt.onrender.com
 ```
 
 Copyright (c) 2023 Victoria
