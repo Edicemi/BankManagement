@@ -6,6 +6,8 @@ This API is a simple Fintech Project that allows user to register or login to th
 
 [Postman-Documentation](https://documenter.getpostman.com/view/15379432/2s9Y5crzhB)
 
+[URL](https://bank-mgt.onrender.com)
+
 ### Technology Used
 
 - [Node.js](https://nodejs.org/) - Server Side
