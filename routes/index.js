@@ -12,7 +12,7 @@ const { validateUserToken } = require("../lib/ath");
 // route for authentication
 router.post(
   "/createAccount",create_account);
-router.get("/getAccountInfo", fetchByAccountInfo);
+router.get("/getAccountInfo/:accountnumber", fetchByAccountInfo);
 router.get("/getAllInfo", fetchAllAccountInfo);
 
 module.exports = router;

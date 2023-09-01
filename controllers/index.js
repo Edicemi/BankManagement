@@ -27,7 +27,7 @@ exports.create_account = async (req, res, next) => {
                     400
                 );
             }
-            const account = new Account({
+            const user = new Account({
                 accountname: accountname,
                 deposit: deposit,
                 accounttype: accounttype,
@@ -35,15 +35,15 @@ exports.create_account = async (req, res, next) => {
                 accountnumber: accountNumber,
             });
 
-    await account.save();
+    await user.save();
             return res.status(200).json({
                 message: "Account created succesfully",
                 code: 200,
                 status: "success",
-                accountNumber,
                 accountname,
                 accounttype,
                 deposit,
+                accountNumber,
             });
         } else {
             throw new CustomError().invalid_parameter();
@@ -58,13 +58,13 @@ exports.create_account = async (req, res, next) => {
 exports.fetchByAccountInfo = async (req, res, next) => {
     try {
         const { accountnumber } = req.body
-        const users = await Account.findOne({ accountnumber: accountnumber });
+        const users = await Account.findOne({ accountnumber});
         if (users) {
             const account = await Account.find().select(["accountname", "deposit", "accountnumber", "dob", "accounttype"]);
             return res.status(200).json({
                 status: "success",
                 message: 'Account Info fetched succesfully',
-                account,
+                users,
             });
         } else {
             throw Error('Invalid account number, check correctly',
