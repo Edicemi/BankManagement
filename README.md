@@ -4,7 +4,7 @@
 
 This API is a simple Fintech Project that allows user to register or login to the system and create an account then fund their account, and then withdraw funds from the account and transfer funds to other accounts.
 
-[Postman-Documentation]()
+[Postman-Documentation](https://documenter.getpostman.com/view/15379432/2s9Y5crzhB)
 
 ### Technology Used
 
